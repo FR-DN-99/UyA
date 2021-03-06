@@ -13,3 +13,5 @@
   *  Uso del navegador Lynx.
 
 Grabar un video en el que al menos dos componentes del grupo busquen la información y los otros dos deben comentar lo que está pasando. Compartir el video en el Google Drive y entregar un resumen de la experiencia de a lo sumo 200 palabras.
+
+Enlace video: https://drive.google.com/drive/u/1/folders/16QWDh3LgqrARZxY4wobB55jUatD3pyJc
