@@ -5,9 +5,8 @@
    * Inicio de los trámites de matriculación.
    * Consulta de las notas del primer cuatrimestre.
 
-La búsqueda se realizará en los siguientes contextos:
-
-   * Uso del navegador Chrome con la extensión ChromeVox y la pantalla del ordenador apagada.
-   * Uso del navegador Lynx.
+  La búsqueda se realizará en los siguientes contextos
+  *  Uso del navegador Chrome con la extensión ChromeVox y la pantalla del ordenador apagada.
+  *  Uso del navegador Lynx.
 
 Grabar un video en el que al menos dos componentes del grupo busquen la información y los otros dos deben comentar lo que está pasando. Compartir el video en el Google Drive y entregar un resumen de la experiencia de a lo sumo 200 palabras.
