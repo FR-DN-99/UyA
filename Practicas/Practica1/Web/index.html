@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>Sistema de Gestión de Tareas</title>
+	</head>
+
+	<body>
+	<div>
+		<h1>Sistema de Gestión de Tareas</h1>	
+		
+		<div>
+		<table> 
+			<tr>
+				<td colspan = 5> <h2> Subtítulo </h2></td> <td> <a href= ""> Mi Cuenta </a> </td> 
+			</tr>
+			<tr>
+				<td><a href="./index.html">Inicio</a></td> <td> <a href="./index.html#calendario">Calendario</a> </td> <td>Mis Estadísticas</td> <td><a href="./grupos.html">Mis grupos de trabajo</a></td> <td>Agenda de actividades</td> <td><a href = "ayuda.html">Ayuda</a></td> 
+			</tr>
+		</table>
+		</div>
+
+		<div>
+		<table> 
+			<tr>
+				<td> <a href= "./grupos.html"> <h3>  Unirse a un grupo de trabajo  </h3> </a> </td> 
+				<td> <a href= #calendario> <h3> Revisar el calendario </h3> </a> </td>
+				<td>
+					<div>
+					<h3>  Añadir una tarea  </h3>
+					<form method="post">
+					<ul>
+						<li>
+							<label for="new_task">Nombre: </label>
+							<input type="text" id="new_task" name="nombre_tarea">
+						</li>
+						<li>
+							<label for="new_task_date">Fecha Límite: </label>
+							<input type="date" id="new_task_date" name="fecha_tarea">
+						</li>
+						<li>
+							<label for="new_task_pr">Nivel de prioridad de la tarea: </label>
+							<input type="number" id="new_task_pr" name="prioridad_tarea">
+						</li>
+						<li>
+							<label for="task_desc">Descripción de la tarea: </label>
+							<br><br>
+							<textarea id="task_desc" name="descripcion_tarea" cols="50" rows="10">Introduzca aquí la descripción</textarea>
+							
+						</li>
+						<br>
+						<input type="submit" value="Crear">
+					</ul>
+					</form>
+					</div>
+				</td> 
+			</tr>
+		</table>
+		</div>
+		<div>	
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</div>
+		
+		<div>
+		<h2 id="calendario"> Calendario </h2>
+		<img src="./calendario.png"></img>
+		</div>
+
+		<div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>	
+		</div>
+	</div>
+	</body>
+
+</html>
