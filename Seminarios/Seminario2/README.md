@@ -1,4 +1,4 @@
-# Seminario 2
+# Uso de la web por personas con disfuncionalidad
 
 
 ### 1. El grupo debe realizar la búsqueda de la siguiente información en la web de la ULL:
