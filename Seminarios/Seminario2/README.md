@@ -1,11 +1,14 @@
-1. El grupo debe realizar la búsqueda de la siguiente información en la web de la ULL:
+# Seminario 2
+
+
+### 1. El grupo debe realizar la búsqueda de la siguiente información en la web de la ULL:
 
    * Consulta del calendario académico.
    * Búsqueda de los horarios de la asignatura de usabilidad.
    * Inicio de los trámites de matriculación.
    * Consulta de las notas del primer cuatrimestre.
 
-  La búsqueda se realizará en los siguientes contextos
+  **La búsqueda se realizará en los siguientes contextos**
   *  Uso del navegador Chrome con la extensión ChromeVox y la pantalla del ordenador apagada.
   *  Uso del navegador Lynx.
 
