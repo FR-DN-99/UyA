@@ -1,4 +1,3 @@
-
 1. El grupo debe realizar la búsqueda de la siguiente información en la web de la ULL:
 
 * Consulta del calendario académico.
