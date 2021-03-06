@@ -17,11 +17,15 @@
 
 
 * **Qué peticiones desencadena la consulta.**
+
 Al realizar la petición del archivo index el navegador ha tenido que resolver las siguientes referencias para poder mostrar la página.
+
 ![Imagen peticiones](https://i.imgur.com/EmdRFrO.png)
 
 * **¿Qué tipo de petición estás realizando?**
+
 Es una petición GET (Request Method: GET):
+
 ![Imagen GET](https://i.imgur.com/38vHyHw.png)
 
 * **Qué código de estatus devuelve.**
