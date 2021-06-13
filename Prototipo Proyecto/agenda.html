@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/main.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            
+    <!-- Otras etiquetas -->
+    <title>Coordinate-Me - Agenda</title>
+  </head>
+
+  <body class="fondo-body">
+    <!-- Cabecera -->
+    <header>
+        <nav class="fondo-navs">
+            <div class="nav-wrapper">
+                <div class="row">  
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="#main" aria-label="Saltar al contenido principal"></a>  
+                    <div class="col l2 m4 s4 offset-s3 offset-m3">
+                        <a href="./index.html"><img class="brand-logo responsive-img" src="./img/logo_small.png" alt="Ir a la página de inicio"></a>
+                    </div>
+    
+                    <div class="col l10">
+                        <ul class="right hide-on-med-and-down">
+                            <li><a tabindex="-1" href="./index.html" class="texto-negrita">Inicio</a></li>
+                            <li><a tabindex="-1" href="./grupos.html" class="texto-negrita">Grupos de Trabajo</a></li>
+                            <li><a tabindex="-1" href="./agenda.html" class="texto-negrita">Agenda de Tareas</a></li>
+                            <li><a tabindex="-1" href="./mapa.html" class="texto-negrita">Mapa web</a></li>
+                            <li><a tabindex="-1" href="./ayuda.html" class="texto-negrita">Ayuda</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <ul class="sidenav fondo-main" id="mobile-demo">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./grupos.html">Grupos de Trabajo</a></li>
+            <li><a href="./agenda.html">Agenda de Tareas</a></li>
+            <li><a href="./mapa.html">Mapa web</a></li>
+            <li><a href="./ayuda.html">Ayuda</a></li>
+        </ul>
+    </header>
+
+
+
+    <!-- Contenido -->
+    <main>
+        <div class="container fondo-main ajustecontainer z-depth-5" id="main">
+            <nav>
+                <div class="nav-wrapper fondo-navs">
+                  <div class="col s12">
+                        <a href="./index.html" class="breadcrumb texto-negrita">&nbsp &nbsp Inicio</a>
+                        <a href="#!" class="breadcrumb texto-negrita">Agenda de actividades</a>
+                    </div>
+                </div>
+            </nav>
+    
+            <div class="seccion">
+                <h1  tabindex="0" class="center-align">Agenda de tareas</h1>
+                <br>
+                <div class="row">
+                    <div class="col m12 l5">
+                        <h2  tabindex="0" class="texto-titulo">Actualiza la agenda</h2>
+                        <div class="card-panel white-text texto-negrita fondo-forms">
+                            <form method="post" name="nameform" id="myForm">
+                                <fieldset>
+                                    <legend>Selector de operación</legend>
+                                    <ul>
+                                        <li>
+                                            <label for="Atributo0" class="white-text texto-negrita">Indique el tipo de operación:</label>
+                                            <select class="browser-default grey lighten-3" name="Atributo0">
+                                                <option value="crear">Añadir/Modificar una tarea</option>
+                                                <option value="eliminar">Eliminar una tarea</option>
+                                              </select>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Información de la actividad</legend>
+                                    <ul>
+                                        <li>
+                                            <label for="new_task" class="white-text texto-negrita"><abbr title="campo obligatorio">*</abbr>Inserte el Nombre de la tarea: </label>
+                                            <input type="text" aria-label="Nombre de la tarea" placeholder="Nombre..." name="Atributo1" required="required">
+                                        </li>
+                                        <li>
+                                            <label for="new_task" class="white-text texto-negrita">Inserte la duración en horas de la tarea: </label>
+                                            <input type="number" aria-label="Duración de la tarea en horas" name="Atributo2">
+                                        </li>
+                                        <li>
+                                            <label for="new_task" class="white-text texto-negrita">Inserte la fecha límite de la tarea: </label>
+                                            <input type="date" aria-label="Fecha límite de la tarea" aria-describedby="formatoFecha" name="Atributo3">
+                                            <span id="formatoFecha">Formato de fecha: dd-mm-aa</span>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                            <br>
+                            <button id="button" form="nameform" value="Submit">Enviar</button>
+    
+                            <div id="errmsg"></div>
+                        </div>
+                        <p  tabindex="0" class="text-lighten-4">¿Alguna duda? Visita la <a href="./ayuda.html" class="links">sección de ayuda</a>.</p>
+                    </div>
+                    <div class="col m12 l7">
+                        <h2  tabindex="0" class="texto-titulo">Actividades pendientes</h2>
+                        <div class="card-panel white-text texto-negrita fondo-navs">
+                            <p id="databasetask"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    
+    <footer class="page-footer fondo-navs">
+        <div class="row">
+            <div class="col l6 s12">
+                <h1  tabindex="0" class="white-text texto-titulo">Más información</h1>
+                <p  tabindex="0" class="grey-text text-lighten-4">Ante cualquier dificultad puedes visitar la <a href="./ayuda.html" class="links2">sección de ayuda</a> o ponerte en contacto con nosotros.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h2  tabindex="0" class="white-text texto-titulo">Contacto</h2>
+                <ul>
+                    <li><p  tabindex="0" class="grey-text text-lighten-3">alu0101205953@ull.edu.es</p></li>
+                    <li><p  tabindex="0" class="grey-text text-lighten-3">alu0101209500@ull.edu.es</p></li>
+                    <li><p  tabindex="0" class="grey-text text-lighten-3">alu0101134703@ull.edu.es</p></li>
+                </ul>
+            </div>
+        </div>
+        <p  tabindex="0" class="center-align">© 2021 Copyright</p>
+        <div class="footer-copyright">
+        </div>
+    </footer>
+    
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+
+    <script>
+        const elems = document.querySelector('.sidenav');
+        M.Sidenav.init(elems);
+
+        // Your web app's Firebase configuration
+		  var firebaseConfig = {
+		    apiKey: "AIzaSyB82_uWcKIs4wFA4uVOoybSsjMDlvcxuFo",
+		    authDomain: "uyap5-9fae3.firebaseapp.com",
+		    databaseURL: "https://uyap5-9fae3-default-rtdb.firebaseio.com",
+		    projectId: "uyap5-9fae3",
+		    storageBucket: "uyap5-9fae3.appspot.com",
+		    messagingSenderId: "1059776046703",
+		    appId: "1:1059776046703:web:e92f1b32731a203d9ecf9a"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+
+
+		      //Referencia a la base de datos
+			var database = firebase.database();
+			var referencia = database.ref('Actividades');
+			referencia.once('value', snapshot => {
+                console.log(snapshot.val());
+                let str_aux = ``;
+                for(var v in snapshot.val()) {
+				    console.log(snapshot.val()[v]);
+				    str_aux += `<div class="card-panel white-text texto-negrita fondo-forms">` + `<p  tabindex="0" >Nombre: ` + snapshot.val()[v].Nombre + `</p><p tabindex="0" >Duración: ` + snapshot.val()[v].Duracion + ` horas </p><p tabindex="0" >Fecha límite: ` + snapshot.val()[v].Fecha + "</p>" + "</div>";       
+                }
+                if(str_aux === ""){
+                    str_aux = `<p  tabindex="0" >No hay actividades pendientes</p>`;
+                }
+                console.log(str_aux); 
+                $('#databasetask').html(str_aux);
+			});
+
+            $(document).ready(function(){
+                $('#button').click(function() {
+                    referencia = database.ref('Actividades');
+
+                    let str_aux = "";
+                    referencia.once('value', snapshot => {
+                        str_aux = JSON.stringify(snapshot.val());
+                        console.log(str_aux);
+                        if(str_aux === "null"){
+                            str_aux = "{}";
+                        }
+                        if(String($('#myForm').serializeArray()[0].value) === "crear"){
+                            if(String($('#myForm').serializeArray()[1].value) === "" || String($('#myForm').serializeArray()[2].value) === "" || String($('#myForm').serializeArray()[3].value) === ""){
+                                console.log("Valores incompletos");
+                                $('#errmsg').html(`<p tabindex="0" class="red-text texto-negrita">Los campos Nombre, Duración, y Fecha límite son obligatorios</p>`);
+                            } else {
+                                str_aux = str_aux.slice(0, str_aux.length-1);
+                                $('#errmsg').html(``);
+                                str_aux += `,"` + String($('#myForm').serializeArray()[1].value) + `":{"Duracion":`;
+                                str_aux += String($('#myForm').serializeArray()[2].value) + `,"Fecha":"` + String($('#myForm').serializeArray()[3].value) + `","Nombre":"`;
+                                str_aux += String($('#myForm').serializeArray()[1].value) + `"}}`
+                                console.log(str_aux);
+                            }
+                        } else if(String($('#myForm').serializeArray()[0].value) === "eliminar"){
+                            if(String($('#myForm').serializeArray()[1].value) === ""){
+                                console.log("Valores incompletos");
+                                $('#errmsg').html(`<p tabindex="0" class="red-text texto-negrita">El campo Nombre es obligatorios</p>`);
+                            } else {
+                                $('#errmsg').html(``);
+                                let dummy = "{";
+                                for(var v in snapshot.val()) {
+                                    if(v != String($('#myForm').serializeArray()[1].value)){
+                                        dummy += `"${v}":` + JSON.stringify(snapshot.val()[v]) + ",";
+                                    }
+                                }
+                                if(dummy !== "{"){
+                                    dummy = dummy.slice(0, dummy.length-1);
+                                }
+                                dummy += "}";
+                                str_aux = dummy;
+                            }
+                        } else {
+                            console.log("Error");
+                        }
+                        if(str_aux.charAt(1) === ","){
+                            str_aux = "{" + str_aux.slice(2);
+                        }
+                        let json_aux = JSON.parse(str_aux);
+                        console.log(json_aux);
+                        referencia.set(json_aux);
+
+                        //Volver a imprimir el listado de actividades
+                        referencia.once('value', snapshot => {
+                            let str_aux = ``;
+                            for(var v in snapshot.val()) {
+                                str_aux += `<div class="card-panel white-text texto-negrita fondo-forms">` + `<p  tabindex="0" >Nombre: ` + snapshot.val()[v].Nombre + `</p><p tabindex="0" >Duración: ` + snapshot.val()[v].Duracion + ` horas </p><p tabindex="0" >Fecha límite: ` + snapshot.val()[v].Fecha + "</p>" + "</div>";       
+                            }
+                            if(str_aux === ""){
+                                str_aux = `<p  tabindex="0" >No hay actividades pendientes</p>`;
+                            }
+                            $('#databasetask').html(str_aux);
+                        });
+                        
+                    });
+                    
+                    //Escribir un documento
+                    /*
+                    referencia.set({
+                        Nombre: String($('#myForm').serializeArray()[1].value),
+                        Duracion: String($('#myForm').serializeArray()[2].value),
+                        Fecha: String($('#myForm').serializeArray()[3].value)
+                    });*/
+                });
+            });
+    </script>
+  </body>
+</html>

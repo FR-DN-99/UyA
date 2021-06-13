@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/main.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+    <!-- Otras etiquetas -->
+    <title>Coordinate-Me - Grupos</title>
+  </head>
+
+  <body class=" fondo-body">
+    <!-- Cabecera -->
+    <header>
+        <nav class="fondo-navs">
+            <div class="nav-wrapper">
+                <div class="row">  
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="#main" aria-label="Saltar al contenido principal"></a>  
+                    <div class="col l2 m4 s4 offset-s3 offset-m3">
+                        <div class="">
+                            <a href="./index.html" alt="Inicio"><img class="brand-logo responsive-img" src="./img/logo_small.png" alt="logo"></a>
+                        </div>
+                    </div>
+    
+                    <div class="col l10">
+                        <ul class="right hide-on-med-and-down">
+                            <li><a tabindex="-1" href="./index.html" class="texto-negrita">Inicio</a></li>
+                            <li><a tabindex="-1" href="./grupos.html" class="texto-negrita">Grupos de Trabajo</a></li>
+                            <li><a tabindex="-1" href="./agenda.html" class="texto-negrita">Agenda de Tareas</a></li>
+                            <li><a tabindex="-1" href="./mapa.html" class="texto-negrita">Mapa web</a></li>
+                            <li><a tabindex="-1" href="./ayuda.html" class="texto-negrita">Ayuda</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <ul class="sidenav blue lighten-5" id="mobile-demo">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./grupos.html">Grupos de Trabajo</a></li>
+            <li><a href="./agenda.html">Agenda de Tareas</a></li>
+            <li><a href="./mapa.html">Mapa web</a></li>
+            <li><a href="./ayuda.html">Ayuda</a></li>
+        </ul>
+    </header>
+
+
+
+    <!-- Contenido -->
+    <main>
+        <div class="container fondo-main ajustecontainer z-depth-5" id="main">
+            <nav>
+                <div class="nav-wrapper fondo-navs">
+                  <div class="col s12">
+                        <a href="./index.html" class="breadcrumb texto-negrita">&nbsp &nbsp Inicio</a>
+                        <a href="#!" class="breadcrumb texto-negrita">Grupos de trabajo</a>
+                    </div>
+                </div>
+            </nav>
+    
+            <div class="seccion">
+                <h1  tabindex="0" class="center-align">Grupos de trabajo</h1>
+                <br>
+                <div class="row">
+                    <div class="col m12 l6">
+                        <h2  tabindex="0" class="texto-titulo">Unirse a un grupo</h2>
+                        <div class="card-panel white-text texto-negrita fondo-forms">
+                            <form method="post" name="nameform" id="myForm">
+                                <fieldset>
+                                    <legend>Información del grupo</legend>
+                                    <ul>
+                                        <li>
+                                            <label for="new_task" class="white-text texto-negrita"><abbr title="campo obligatorio">*</abbr>Nombre del grupo: </label>
+                                            <input type="text" aria-label="Nombre del grupo" placeholder="Nombre" name="Atributo1" required="required">
+                                        </li>
+                                        <li>
+                                            <label for="new_task" class="white-text texto-negrita"><abbr title="campo obligatorio">*</abbr>Código de invitación: </label>
+                                            <input type="text" aria-label="Código de invitación" placeholder="Código" name="Atributo2" required="required">
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                            <br>
+                            <button id="button" form="nameform" value="Submit">Enviar</button>
+    
+                            <div id="errmsg"></div>
+                        </div>
+                    </div>
+    
+                    <div class="col m12 l6">
+                        <h2  tabindex="0" class="texto-titulo">Crear / Salir de un grupo</h2>
+                        <div class="card-panel white-text texto-negrita fondo-forms">
+                            <form method="post" name="nameform2" id="myForm2">
+                                <fieldset>
+                                    <legend>Selector de operación</legend>
+                                    <ul>
+                                        <li>
+                                            <label for="Atributo0" class="white-text texto-negrita">Tipo de operación:</label>
+                                            <select class="browser-default grey lighten-3" aria-label="Tipo de operación" name="Atributo0">
+                                                <option value="crear">Crear un grupo</option>
+                                                <option value="eliminar">Salir de un grupo</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Información del grupo</legend>
+                                    <ul>
+                                        <li>
+                                            <label for="new_task" class="white-text texto-negrita"><abbr title="campo obligatorio">*</abbr>Nombe del grupo: </label>
+                                            <input type="text" aria-label="Nombre del grupo" placeholder="Nombre" name="Atributo1" required="required">
+                                        </li>
+                                        <li>
+                                            <label for="new_task" class="white-text texto-negrita">Código de invitación (En caso de creación): </label>
+                                            <input type="text" aria-label="Código de invitación" placeholder="Código" name="Atributo2">
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                                
+                            </form>
+                            <br>
+                            <button id="button2" form="nameform2" value="Submit">Enviar</button>
+    
+                            <div id="errmsg2"></div>
+                        </div>
+                    </div>
+    
+                    <div class="col s12">
+                        <p  tabindex="0" class="text-lighten-4">¿Alguna duda? Visita la <a href="./ayuda.html" class="links">sección de ayuda</a>.</p>
+                    </div>
+                    <div class="col s12">
+                        <h2  tabindex="0" class="texto-titulo">Mis grupos de trabajo</h2>
+                        <div class="card-panel white-text texto-negrita fondo-navs">
+                            <p id="databasetask"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    
+    <footer class="page-footer fondo-navs">
+        <div class="row">
+            <div class="col l6 s12">
+                <h1  tabindex="0" class="white-text texto-negrita texto-titulo">Más información</h1>
+                <p  tabindex="0" class="grey-text text-lighten-4">Ante cualquier dificultad puedes visitar la <a href="./ayuda.html" class="links2">sección de ayuda</a> o ponerte en contacto con nosotros.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h2  tabindex="0" class="white-text texto-negrita texto-titulo">Contacto</h2>
+                <ul>
+                    <li><p  tabindex="0" class="grey-text text-lighten-3">alu0101205953@ull.edu.es</p></li>
+                    <li><p  tabindex="0" class="grey-text text-lighten-3">alu0101209500@ull.edu.es</p></li>
+                    <li><p  tabindex="0" class="grey-text text-lighten-3">alu0101134703@ull.edu.es</p></li>
+                </ul>
+            </div>
+        </div>
+        <p  tabindex="0" class="center-align">© 2021 Copyright</p>
+        <div class="footer-copyright">
+        </div>
+    </footer>
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+
+    <script>
+        const elems = document.querySelector('.sidenav');
+        M.Sidenav.init(elems);
+
+        // Your web app's Firebase configuration
+		  var firebaseConfig = {
+		    apiKey: "AIzaSyB82_uWcKIs4wFA4uVOoybSsjMDlvcxuFo",
+		    authDomain: "uyap5-9fae3.firebaseapp.com",
+		    databaseURL: "https://uyap5-9fae3-default-rtdb.firebaseio.com",
+		    projectId: "uyap5-9fae3",
+		    storageBucket: "uyap5-9fae3.appspot.com",
+		    messagingSenderId: "1059776046703",
+		    appId: "1:1059776046703:web:e92f1b32731a203d9ecf9a"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+
+
+		      //Referencia a la base de datos
+			var database = firebase.database();
+			var referencia = database.ref('Grupos');
+			referencia.once('value', snapshot => {
+                console.log(snapshot.val());
+                let str_aux = ``;
+                for(var v in snapshot.val()) {
+				    console.log(snapshot.val()[v]);
+                    if(snapshot.val()[v].Participantes.split(",").indexOf("Tú") >= 0){
+    				    str_aux += `<div class="card-panel white-text texto-negrita fondo-forms">` + `<p tabindex="0" >Nombre: ` + snapshot.val()[v].Nombre + `</p><p tabindex="0" >Participantes: ` + snapshot.val()[v].Participantes.split(",").join(", ") + "</div>";       
+                    }
+                }
+                if(str_aux === ""){
+                    str_aux = `<p  tabindex="0" >No formas parte de ningún grupo</p>`
+                }
+                console.log(str_aux); 
+                $('#databasetask').html(str_aux);
+			});
+
+            $(document).ready(function(){
+                $('#button').click(function() {
+                    referencia = database.ref('Grupos');
+
+                    let str_aux = "";
+                    let json_aux;
+                    referencia.once('value', snapshot => {
+                        json_aux = snapshot.val();
+                        console.log(str_aux);
+
+                        if(String($('#myForm').serializeArray()[0].value) === "" || String($('#myForm').serializeArray()[1].value) === "") {
+                            console.log("Valores incompletos");
+                            $('#errmsg').html(`<p tabindex="0" class="red-text texto-negrita">Los campos de Nombre del grupo y Código de Invitación son obligatorios</p>`);
+                        } else {
+                            for(var v in snapshot.val()) {
+                                if(v === String($('#myForm').serializeArray()[0].value)){
+                                    if(snapshot.val()[v].Cod == String($('#myForm').serializeArray()[1].value)){
+                                        if(snapshot.val()[v].Participantes.split(",").indexOf("Tú") < 0){
+                                            json_aux[v].Participantes += ",Tú";
+                                            $('#errmsg').html(`<p tabindex="0" class="red-text texto-negrita"></p>`); 
+                                        } else {
+                                            $('#errmsg').html(`<p tabindex="0" class="red-text texto-negrita">Ya formas parte de este grupo</p>`);
+                                        }
+                                    } else {
+                                        $('#errmsg').html(`<p tabindex="0" class="red-text texto-negrita">El Código de invitación no es válido</p>`);
+                                    }
+                                }
+                            }
+                        }
+                        console.log(json_aux);
+                        referencia.set(json_aux);
+
+                        //Volver a imprimir el listado de actividades
+                        referencia.once('value', snapshot => {
+                            console.log(snapshot.val());
+                            let str_aux = ``;
+                            for(var v in snapshot.val()) {
+                                console.log(snapshot.val()[v]);
+                                if(snapshot.val()[v].Participantes.split(",").indexOf("Tú") >= 0){
+                                    str_aux += `<div class="card-panel white-text texto-negrita fondo-forms">` + `<p tabindex="0" >Nombre: ` + snapshot.val()[v].Nombre + `</p><p tabindex="0" >Participantes: ` + snapshot.val()[v].Participantes.split(",").join(", ") + "</div>";       
+                                }
+                            }
+                            if(str_aux === ""){
+                                str_aux = `<p  tabindex="0" >No formas parte de ningún grupo</p>`
+                            }
+                            $('#databasetask').html(str_aux);
+                        });
+                    });
+                });
+
+
+                $('#button2').click(function() {
+                    referencia = database.ref('Grupos');
+
+                    let str_aux = "";
+                    let json_aux;
+                    referencia.once('value', snapshot => {
+                        json_aux = snapshot.val();
+                        let grupos_creados = [];
+                        let info_grupos = [];
+                        for(let v in snapshot.val()){
+                            grupos_creados.push(v);
+                            info_grupos.push([v, snapshot.val()[v].Participantes]);
+                        }
+                        console.log(grupos_creados);
+
+                        if(String($('#myForm2').serializeArray()[0].value) === "crear"){
+                            if(String($('#myForm2').serializeArray()[0].value) === "" || String($('#myForm2').serializeArray()[1].value) === ""|| String($('#myForm2').serializeArray()[2].value) === "") {
+                                console.log("Valores incompletos");
+                                $('#errmsg2').html(`<p tabindex="0" class="red-text texto-negrita">Los campos de Nombre del grupo y Código de Invitación son obligatorios</p>`);
+                            } else {
+                                if(grupos_creados.indexOf(String($('#myForm2').serializeArray()[1].value)) >= 0){
+                                    $('#errmsg2').html(`<p tabindex="0" class="red-text texto-negrita">La sala ya existe</p>`);
+                                } else {
+
+                                    str_aux = JSON.stringify(snapshot.val());
+                                    if(str_aux === "null"){
+                                        str_aux = "{}";
+                                    }
+                                    str_aux = str_aux.slice(0, str_aux.length-1);
+                                    $('#errmsg2').html(``);
+                                    str_aux += `,"` + String($('#myForm2').serializeArray()[1].value) + `":{"Cod":`;
+                                    str_aux += String($('#myForm2').serializeArray()[2].value) + `,"Nombre":"` + String($('#myForm2').serializeArray()[1].value) + `","Participantes":"Tú"}}`
+                                    console.log(str_aux);
+
+                                    if(str_aux.charAt(1) === ","){
+                                        str_aux = "{" + str_aux.slice(2);
+                                    }
+                                    json_aux = JSON.parse(str_aux);
+                                }
+                            }
+                        } else if (String($('#myForm2').serializeArray()[0].value) === "eliminar") {
+                            if(String($('#myForm2').serializeArray()[0].value) === "" || String($('#myForm2').serializeArray()[1].value) === "") {
+                                console.log("Valores incompletos");
+                                $('#errmsg2').html(`<p tabindex="0" class="red-text texto-negrita">El campo de Nombre del grupo es obligatorio</p>`);
+                            } else {
+                                if(grupos_creados.indexOf(String($('#myForm2').serializeArray()[1].value)) < 0){
+                                    $('#errmsg2').html(`<p tabindex="0" class="red-text texto-negrita">La sala no existe</p>`);
+                                } else {
+                                    if(info_grupos[grupos_creados.indexOf(String($('#myForm2').serializeArray()[1].value))][1].split(",").includes("Tú")){
+                                        let aux = info_grupos[grupos_creados.indexOf(String($('#myForm2').serializeArray()[1].value))][1].split(",");
+                                        aux.splice(aux.indexOf("Tú"),1);
+                                        if(aux.length == 0){
+                                            $('#errmsg2').html(``);
+                                            let dummy = "{";
+                                            for(var v in snapshot.val()) {
+                                                if(v != String($('#myForm2').serializeArray()[1].value)){
+                                                    dummy += `"${v}":` + JSON.stringify(snapshot.val()[v]) + ",";
+                                                }
+                                            }
+                                            if(dummy !== "{"){
+                                                dummy = dummy.slice(0, dummy.length-1);
+                                            }
+                                            dummy += "}";
+                                            json_aux = JSON.parse(dummy);
+                                            
+                                        } else {
+                                            $('#errmsg2').html(``);
+                                            let dummy = "{";
+                                            for(var v in snapshot.val()) {
+                                                if(v != String($('#myForm2').serializeArray()[1].value)){
+                                                    dummy += `"${v}":` + JSON.stringify(snapshot.val()[v]) + ",";
+                                                } else {
+                                                    dummy += `"${v}":{"Cod":"` + String(snapshot.val()[v].Cod) + `","Nombre":"` + v + `","Participantes":"` + aux.join(",") + `"},`;
+                                                }
+                                            }
+                                            if(dummy !== "{"){
+                                                dummy = dummy.slice(0, dummy.length-1);
+                                            }
+                                            dummy += "}";
+                                            json_aux = JSON.parse(dummy);
+                                        }
+                                        
+                                    } else {
+                                        $('#errmsg2').html(`<p tabindex="0" class="red-text texto-negrita">No estás en esta sala</p>`);
+                                    }
+                                }
+                            }
+                        } else {
+                            $('#errmsg2').html(`<p tabindex="0" class="red-text texto-negrita">ERROR</p>`);
+                        }
+
+                        console.log(json_aux);
+                        referencia.set(json_aux);
+
+                        //Volver a imprimir el listado de actividades
+                        referencia.once('value', snapshot => {
+                            let str_aux = ``;
+                            for(var v in snapshot.val()) {
+                                if(snapshot.val()[v].Participantes.split(",").indexOf("Tú") >= 0){
+                                    str_aux += `<div class="card-panel white-text texto-negrita fondo-forms">` + `<p tabindex="0" >Nombre: ` + snapshot.val()[v].Nombre + `</p><p tabindex="0" >Participantes: ` + snapshot.val()[v].Participantes.split(",").join(", ") + "</div>";       
+                                }
+                            }
+                            if(str_aux === ""){
+                                str_aux = `<p  tabindex="0" >No formas parte de ningún grupo</p>`
+                            }
+                            $('#databasetask').html(str_aux);
+                        });
+                    });
+                });
+            });
+    </script>
+  </body>
+</html>
